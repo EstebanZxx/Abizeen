@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Future Gallery</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050816;
+    color:#fff;
+    font-family:Arial, sans-serif;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(0,255,255,.12),transparent 25%),
+    radial-gradient(circle at 80% 80%,rgba(0,128,255,.12),transparent 25%);
+    pointer-events:none;
+}
+
+header{
+    text-align:center;
+    padding:40px 15px 25px;
+}
+
+header h1{
+    font-size:3rem;
+    letter-spacing:6px;
+    color:#00eaff;
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 25px #00eaff,
+        0 0 50px #00eaff;
+}
+
+header p{
+    margin-top:10px;
+    color:#bdbdbd;
+    font-size:1.1rem;
+}
+
+.gallery{
+    width:min(1400px,95%);
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:24px;
+    padding-bottom:50px;
+}
+
+.card{
+    background:#091122;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid rgba(0,255,255,.3);
+    box-shadow:
+        0 0 10px rgba(0,255,255,.3),
+        0 0 30px rgba(0,255,255,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:
+        0 0 20px rgba(0,255,255,.8),
+        0 0 50px rgba(0,255,255,.4);
+}
+
+.card img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.card a{
+    display:block;
+}
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.95);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:95%;
+    object-fit:contain;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:25px;
+    font-size:40px;
+    cursor:pointer;
+    color:white;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#888;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h2>Contoh Plat Mika</h2>
+</header>
+
+<div class="gallery">
+
+    <div class="card">
+        <a href="#" onclick="showImg('https://i.postimg.cc/FRzrs06B/20260609-191716.jpg')">
+            <img src="https://i.postimg.cc/FRzrs06B/20260609-191716.jpg">
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="#" onclick="showImg('https://i.postimg.cc/tRfTJmpc/20260609-191803.jpg')">
+            <img src="https://i.postimg.cc/tRfTJmpc/20260609-191803.jpg">
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="#" onclick="showImg('https://i.postimg.cc/62RwKLYh/20260609-191843.jpg')">
+            <img src="https://i.postimg.cc/62RwKLYh/20260609-191843.jpg">
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="#" onclick="showImg('https://i.postimg.cc/PpZhHz24/20260609-191909-2.jpg')">
+            <img src="https://i.postimg.cc/PpZhHz24/20260609-191909-2.jpg">
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="#" onclick="showImg('https://i.postimg.cc/r0WcTCQj/20260609-192010-2.jpg')">
+            <img src="https://i.postimg.cc/r0WcTCQj/20260609-192010-2.jpg">
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="#" onclick="showImg('https://i.postimg.cc/V5q1HgSv/20260609-192041.jpg')">
+            <img src="https://i.postimg.cc/V5q1HgSv/20260609-192041.jpg">
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="#" onclick="showImg('https://i.postimg.cc/qhn0rXjx/20260609-192101-2.jpg')">
+            <img src="https://i.postimg.cc/qhn0rXjx/20260609-192101-2.jpg">
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="#" onclick="showImg('https://i.postimg.cc/DmrFY6Wy/20260609-192127.jpg')">
+            <img src="https://i.postimg.cc/DmrFY6Wy/20260609-192127.jpg">
+        </a>
+    </div>
+
+    <div class="card">
+        <a href="#" onclick="showImg('https://i.postimg.cc/ThVGH0y3/20260609-192147.jpg')">
+            <img src="https://i.postimg.cc/ThVGH0y3/20260609-192147.jpg">
+        </a>
+    </div>
+
+</div>
+
+<div class="lightbox" id="lightbox">
+    <span class="close" onclick="hideImg()">&times;</span>
+    <img id="preview">
+</div>
+
+<footer>
+    Abizeen Graphic Design © 2026
+</footer>
+
+<script>
+function showImg(src){
+    document.getElementById('preview').src = src;
+    document.getElementById('lightbox').classList.add('active');
+}
+
+function hideImg(){
+    document.getElementById('lightbox').classList.remove('active');
+}
+
+document.getElementById('lightbox').addEventListener('click', function(e){
+    if(e.target === this){
+        hideImg();
+    }
+});
+</script>
+
+</body>
+</html>

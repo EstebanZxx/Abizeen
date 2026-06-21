@@ -1,0 +1,113 @@
+window.categories = {
+"Trending Now":[
+{
+title:"Disclosure Day",
+poster:"https://m.media-amazon.com/images/M/MV5BMTg0NjUwMzg5NF5BMl5BanBnXkFtZTgwNDgzMDk1MDE@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt32093575/"
+},
+{
+title:"Obsession",
+poster:"https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1NjE@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt37287335/"
+},
+{
+title:"Backrooms",
+poster:"https://m.media-amazon.com/images/M/MV5BNjRlYzM3ZDAtNDVkYS00M2QxLWJkNzEtYWE5NzE5NTIwOGNhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt26657236/"
+},
+{
+title:"Scary Movie",
+poster:"https://m.media-amazon.com/images/M/MV5BMTQwMDQ0NDk1OV5BMl5BanBnXkFtZTcwNDcxOTExNg@@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt0257106/"
+},
+{
+title:"Masters of the Universe",
+poster:"https://m.media-amazon.com/images/M/MV5BMTY5OTU0OTc2NV5BMl5BanBnXkFtZTcwMzU4MDcyMQ@@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt0093507/"
+}
+],
+
+"Popular Movies":[
+{
+title:"Michael",
+poster:"https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt0090870/"
+},
+{
+title:"Spider-Noir",
+poster:"https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt15398776/"
+},
+{
+title:"Project Hail Mary",
+poster:"https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt9620292/"
+},
+{
+title:"The Punisher: One Last Kill",
+poster:"https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt0450259/"
+},
+{
+title:"Send Help",
+poster:"https://m.media-amazon.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt15398776/"
+}
+],
+
+"New Releases":[
+{
+title:"Josephine",
+poster:"https://m.media-amazon.com/images/M/MV5BMjA5Njk3MjM4OV5BMl5BanBnXkFtZTcwMTc5MTE1MQ@@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt15398776/"
+},
+{
+title:"Cosmic",
+poster:"https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt15398776/"
+},
+{
+title:"One Battle After Another",
+poster:"https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt15398776/"
+},
+{
+title:"Train Dreams",
+poster:"https://m.media-amazon.com/images/M/MV5BMjI1MjkzMjczMV5BMl5BanBnXkFtZTcwNDk2MzAyMw@@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt15398776/"
+},
+{
+title:"Hamnet",
+poster:"https://m.media-amazon.com/images/M/MV5BMjExNzA4MDYxN15BMl5BanBnXkFtZTcwOTI1MDAxOQ@@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt15398776/"
+}
+],
+
+"Action & Thriller":[
+{
+title:"Goat",
+poster:"https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt15398776/"
+},
+{
+title:"Nobody 2",
+poster:"https://m.media-amazon.com/images/M/MV5BMjM0ODc1NDAzNV5BMl5BanBnXkFtZTgwODM3MTc2MjI@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt15398776/"
+},
+{
+title:"Weapons",
+poster:"https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt15398776/"
+},
+{
+title:"Freakier Friday",
+poster:"https://m.media-amazon.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt15398776/"
+},
+{
+title:"Widow's Bay",
+poster:"https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_FMjpg_UX1000_.jpg",
+url:"https://www.playimdb.com/title/tt15398776/"
+}
+]
+};

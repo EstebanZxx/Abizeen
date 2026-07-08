@@ -3,215 +3,138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Future Gallery</title>
-
+<title>ABIZEEN GRAPHIC DESIGN</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+:root{
+--bg:#050505;--card:#0b0b0b;--border:#1a1a1a;
+--primary:#4ade80;--text:#fff;--muted:#9ca3af;
 }
-
-body{
-    background:#050816;
-    color:#fff;
-    font-family:Arial, sans-serif;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);overflow-x:hidden}
 body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:
-    radial-gradient(circle at 20% 20%,rgba(0,255,255,.12),transparent 25%),
-    radial-gradient(circle at 80% 80%,rgba(0,128,255,.12),transparent 25%);
-    pointer-events:none;
+content:'';position:fixed;inset:0;
+background:radial-gradient(circle at top right,rgba(74,222,128,.12),transparent 40%);
+pointer-events:none;z-index:-1;
 }
-
-header{
-    text-align:center;
-    padding:40px 15px 25px;
+nav{
+position:fixed;top:0;left:0;width:100%;
+padding:18px 6%;display:flex;justify-content:space-between;align-items:center;
+background:rgba(5,5,5,.95);backdrop-filter:blur(10px);
+border-bottom:1px solid var(--border);z-index:999;
 }
-
-header h1{
-    font-size:3rem;
-    letter-spacing:6px;
-    color:#00eaff;
-    text-shadow:
-        0 0 10px #00eaff,
-        0 0 25px #00eaff,
-        0 0 50px #00eaff;
+.logo{font-size:1.3rem;font-weight:700;color:var(--primary)}
+nav a{text-decoration:none;color:#fff;margin-left:20px}
+.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:0 20px}
+.hero h1{font-size:clamp(3rem,8vw,5rem)}
+.hero span{color:var(--primary)}
+.hero p{margin-top:20px;color:var(--muted);max-width:700px}
+.btn{display:inline-block;margin-top:30px;padding:14px 35px;background:var(--primary);color:#000;text-decoration:none;border-radius:14px;font-weight:600}
+section{padding:80px 5%}
+.title{text-align:center;margin-bottom:40px}
+.stats,.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.stat,.price-card{
+background:var(--card);border:1px solid var(--border);
+padding:30px;border-radius:20px;text-align:center;
 }
-
-header p{
-    margin-top:10px;
-    color:#bdbdbd;
-    font-size:1.1rem;
-}
-
+.stat h3,.price-card h3{color:var(--primary)}
 .gallery{
-    width:min(1400px,95%);
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:24px;
-    padding-bottom:50px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
 }
-
+@media(min-width:768px){
+.gallery{grid-template-columns:repeat(3,1fr)}
+}
 .card{
-    background:#091122;
-    border-radius:20px;
-    overflow:hidden;
-    border:1px solid rgba(0,255,255,.3);
-    box-shadow:
-        0 0 10px rgba(0,255,255,.3),
-        0 0 30px rgba(0,255,255,.15);
-    transition:.3s;
+background:var(--card);
+border:1px solid #2a2a2a;
+padding:8px;border-radius:20px;
+overflow:hidden;transition:.35s;
 }
-
 .card:hover{
-    transform:translateY(-6px);
-    box-shadow:
-        0 0 20px rgba(0,255,255,.8),
-        0 0 50px rgba(0,255,255,.4);
+transform:translateY(-6px);
+border-color:var(--primary);
+box-shadow:0 0 25px rgba(74,222,128,.25);
 }
-
 .card img{
-    width:100%;
-    height:auto;
-    display:block;
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+border-radius:14px;
+transition:.4s;
 }
-
-.card a{
-    display:block;
-}
-
-.lightbox{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.95);
-    display:none;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-}
-
-.lightbox img{
-    max-width:95%;
-    max-height:95%;
-    object-fit:contain;
-}
-
-.lightbox.active{
-    display:flex;
-}
-
-.close{
-    position:absolute;
-    top:20px;
-    right:25px;
-    font-size:40px;
-    cursor:pointer;
-    color:white;
-}
-
-footer{
-    text-align:center;
-    padding:25px;
-    color:#888;
+.card:hover img{transform:scale(1.05)}
+.price{font-size:2rem;font-weight:700;margin:10px 0}
+footer{padding:40px;text-align:center;color:var(--muted);border-top:1px solid var(--border)}
+.wa{
+position:fixed;right:20px;bottom:20px;width:65px;height:65px;
+display:flex;justify-content:center;align-items:center;
+background:var(--primary);border-radius:50%;text-decoration:none;font-size:28px;color:#000;
 }
 </style>
 </head>
 <body>
+<nav>
+<div class="logo">ABIZEEN</div>
+<div>
+<a href="#galeri">Galeri</a>
+<a href="#tmika">Tanpa Mika</a>
+<a href="#harga">Harga</a>
+</div>
+</nav>
 
-<header>
-    <h2>Contoh Plat Mika</h2>
-</header>
+<section class="hero">
+<div>
+<h1>Plat Nomor Custom<br><span>Premium & Elegan</span></h1>
+<p>Plat nomor custom premium dengan desain eksklusif dan finishing rapi.</p>
+<a href="#galeri" class="btn">Lihat Katalog</a>
+</div>
+</section>
 
+<section>
+<div class="stats">
+<div class="stat"><h3>500+</h3><p>Pesanan Selesai</p></div>
+<div class="stat"><h3>100%</h3><p>Custom Design</p></div>
+<div class="stat"><h3>24 Jam</h3><p>Respon Cepat</p></div>
+</div>
+</section>
+
+<section id="galeri">
+<div class="title"><h2>Contoh Plat Mika</h2></div>
 <div class="gallery">
-
-    <div class="card">
-        <a href="#" onclick="showImg('https://i.postimg.cc/FRzrs06B/20260609-191716.jpg')">
-            <img src="https://i.postimg.cc/FRzrs06B/20260609-191716.jpg">
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="#" onclick="showImg('https://i.postimg.cc/tRfTJmpc/20260609-191803.jpg')">
-            <img src="https://i.postimg.cc/tRfTJmpc/20260609-191803.jpg">
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="#" onclick="showImg('https://i.postimg.cc/62RwKLYh/20260609-191843.jpg')">
-            <img src="https://i.postimg.cc/62RwKLYh/20260609-191843.jpg">
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="#" onclick="showImg('https://i.postimg.cc/PpZhHz24/20260609-191909-2.jpg')">
-            <img src="https://i.postimg.cc/PpZhHz24/20260609-191909-2.jpg">
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="#" onclick="showImg('https://i.postimg.cc/r0WcTCQj/20260609-192010-2.jpg')">
-            <img src="https://i.postimg.cc/r0WcTCQj/20260609-192010-2.jpg">
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="#" onclick="showImg('https://i.postimg.cc/V5q1HgSv/20260609-192041.jpg')">
-            <img src="https://i.postimg.cc/V5q1HgSv/20260609-192041.jpg">
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="#" onclick="showImg('https://i.postimg.cc/qhn0rXjx/20260609-192101-2.jpg')">
-            <img src="https://i.postimg.cc/qhn0rXjx/20260609-192101-2.jpg">
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="#" onclick="showImg('https://i.postimg.cc/DmrFY6Wy/20260609-192127.jpg')">
-            <img src="https://i.postimg.cc/DmrFY6Wy/20260609-192127.jpg">
-        </a>
-    </div>
-
-    <div class="card">
-        <a href="#" onclick="showImg('https://i.postimg.cc/ThVGH0y3/20260609-192147.jpg')">
-            <img src="https://i.postimg.cc/ThVGH0y3/20260609-192147.jpg">
-        </a>
-    </div>
-
+<div class="card"><img src="https://i.postimg.cc/FRzrs06B/20260609-191716.jpg"></div>
+<div class="card"><img src="https://i.postimg.cc/tRfTJmpc/20260609-191803.jpg"></div>
+<div class="card"><img src="https://i.postimg.cc/d1N085Cg/20260609-191843-2.jpg"></div>
+<div class="card"><img src="https://i.postimg.cc/85XChZvq/20260609-191909-2.jpg"></div>
 </div>
+</section>
 
-<div class="lightbox" id="lightbox">
-    <span class="close" onclick="hideImg()">&times;</span>
-    <img id="preview">
+<section id="tmika">
+<div class="title"><h2>Contoh Tanpa Mika</h2></div>
+<div class="gallery">
+<div class="card"><img src="https://i.postimg.cc/Y9DS1dF5/20260609-192010-2.jpg"></div>
+<div class="card"><img src="https://i.postimg.cc/PfcxJFTW/20260609-192041.jpg"></div>
+<div class="card"><img src="https://i.postimg.cc/1t7zpvF2/20260609-192101-2.jpg"></div>
+<div class="card"><img src="https://i.postimg.cc/xj7C8FnH/20260609-192127.jpg"></div>
 </div>
+</section>
 
-<footer>
-    Abizeen Graphic Design © 2026
-</footer>
+<section id="harga">
+<div class="title"><h2>Daftar Harga</h2></div>
+<div class="price-grid">
+<div class="price-card">
+<h3>Plat Mika Premium</h3>
+<div class="price">Rp100.000</div>
+</div>
+<div class="price-card">
+<h3>Tanpa Mika</h3>
+<div class="price">Rp65.000</div>
+</div>
+</div>
+</section>
 
-<script>
-function showImg(src){
-    document.getElementById('preview').src = src;
-    document.getElementById('lightbox').classList.add('active');
-}
-
-function hideImg(){
-    document.getElementById('lightbox').classList.remove('active');
-}
-
-document.getElementById('lightbox').addEventListener('click', function(e){
-    if(e.target === this){
-        hideImg();
-    }
-});
-</script>
-
+<footer>ABIZEEN GRAPHIC DESIGN © 2026</footer>
+<a class="wa" href="https://wa.me/6283143089659">💬</a>
 </body>
 </html>

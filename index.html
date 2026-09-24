@@ -7,21 +7,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
---bg:#050505;--card:#0b0b0b;--border:#1a1a1a;
---primary:#4ade80;--text:#fff;--muted:#9ca3af;
+  --bg:#050505;--card:#0b0b0b;--border:#1a1a1a;
+  --primary:#4ade80;--text:#fff;--muted:#9ca3af;
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);overflow-x:hidden}
 body::before{
-content:'';position:fixed;inset:0;
-background:radial-gradient(circle at top right,rgba(74,222,128,.12),transparent 40%);
-pointer-events:none;z-index:-1;
+  content:'';position:fixed;inset:0;
+  background:radial-gradient(circle at top right,rgba(74,222,128,.12),transparent 40%);
+  pointer-events:none;z-index:-1;
 }
 nav{
-position:fixed;top:0;left:0;width:100%;
-padding:18px 6%;display:flex;justify-content:space-between;align-items:center;
-background:rgba(5,5,5,.95);backdrop-filter:blur(10px);
-border-bottom:1px solid var(--border);z-index:999;
+  position:fixed;top:0;left:0;width:100%;
+  padding:18px 6%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(5,5,5,.95);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);z-index:999;
 }
 .logo{font-size:1.3rem;font-weight:700;color:var(--primary)}
 nav a{text-decoration:none;color:#fff;margin-left:20px}
@@ -34,107 +34,151 @@ section{padding:80px 5%}
 .title{text-align:center;margin-bottom:40px}
 .stats,.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
 .stat,.price-card{
-background:var(--card);border:1px solid var(--border);
-padding:30px;border-radius:20px;text-align:center;
+  background:var(--card);border:1px solid var(--border);
+  padding:30px;border-radius:20px;text-align:center;
 }
 .stat h3,.price-card h3{color:var(--primary)}
 .gallery{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
 }
 @media(min-width:768px){
-.gallery{grid-template-columns:repeat(3,1fr)}
+  .gallery{grid-template-columns:repeat(3,1fr)}
 }
 .card{
-background:var(--card);
-border:1px solid #2a2a2a;
-padding:8px;border-radius:20px;
-overflow:hidden;transition:.35s;
+  background:var(--card);
+  border:1px solid #2a2a2a;
+  padding:8px;border-radius:20px;
+  overflow:hidden;transition:.35s;
 }
 .card:hover{
-transform:translateY(-6px);
-border-color:var(--primary);
-box-shadow:0 0 25px rgba(74,222,128,.25);
+  transform:translateY(-6px);
+  border-color:var(--primary);
+  box-shadow:0 0 25px rgba(74,222,128,.25);
 }
 .card img{
-width:100%;
-aspect-ratio:1/1;
-object-fit:cover;
-border-radius:14px;
-transition:.4s;
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:14px;
+  transition:.4s;
+  display:block;
 }
 .card:hover img{transform:scale(1.05)}
 .price{font-size:2rem;font-weight:700;margin:10px 0}
 footer{padding:40px;text-align:center;color:var(--muted);border-top:1px solid var(--border)}
 .wa{
-position:fixed;right:20px;bottom:20px;width:65px;height:65px;
-display:flex;justify-content:center;align-items:center;
-background:var(--primary);border-radius:50%;text-decoration:none;font-size:28px;color:#000;
+  position:fixed;right:20px;bottom:20px;width:65px;height:65px;
+  display:flex;justify-content:center;align-items:center;
+  background:var(--primary);border-radius:50%;text-decoration:none;font-size:28px;color:#000;
+}
+.loading-msg{
+  grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0;
 }
 </style>
 </head>
 <body>
 <nav>
-<div class="logo">ABIZEEN</div>
-<div>
-<a href="#galeri">Galeri</a>
-<a href="#tmika">Tanpa Mika</a>
-<a href="#harga">Harga</a>
-</div>
+  <div class="logo">ABIZEEN</div>
+  <div>
+    <a href="#galeri">Mika</a>
+    <a href="#tmika">Tanpa Mika</a>
+    <a href="#harga">Harga</a>
+  </div>
 </nav>
 
 <section class="hero">
-<div>
-<h1>Plat Nomor Custom<br><span>Premium & Elegan</span></h1>
-<p>Plat nomor custom premium dengan desain eksklusif dan finishing rapi.</p>
-<a href="#galeri" class="btn">Lihat Katalog</a>
-</div>
+  <div>
+    <h1>Plat Nomor Custom<br><span>Premium & Elegan</span></h1>
+    <p>Plat nomor custom premium dengan desain eksklusif dan finishing rapi.</p>
+    <a href="#galeri" class="btn">Lihat Katalog</a>
+  </div>
 </section>
 
 <section>
-<div class="stats">
-<div class="stat"><h3>500+</h3><p>Pesanan Selesai</p></div>
-<div class="stat"><h3>100%</h3><p>Custom Design</p></div>
-<div class="stat"><h3>24 Jam</h3><p>Respon Cepat</p></div>
-</div>
+  <div class="stats">
+    <div class="stat"><h3>500+</h3><p>Pesanan Selesai</p></div>
+    <div class="stat"><h3>100%</h3><p>Custom Design</p></div>
+    <div class="stat"><h3>24 Jam</h3><p>Respon Cepat</p></div>
+  </div>
 </section>
 
+<!-- GALERI PLAT MIKA -->
 <section id="galeri">
-<div class="title"><h2>Contoh Plat Mika</h2></div>
-<div class="gallery">
-<div class="card"><img src="https://i.postimg.cc/FRzrs06B/20260609-191716.jpg"></div>
-<div class="card"><img src="https://i.postimg.cc/tRfTJmpc/20260609-191803.jpg"></div>
-<div class="card"><img src="https://i.postimg.cc/d1N085Cg/20260609-191843-2.jpg"></div>
-<div class="card"><img src="https://i.postimg.cc/85XChZvq/20260609-191909-2.jpg"></div>
-</div>
+  <div class="title"><h2>Contoh Plat Mika</h2></div>
+  <div class="gallery" id="galeri-mika">
+    <div class="loading-msg">Memuat foto Plat Mika...</div>
+  </div>
 </section>
 
+<!-- GALERI TANPA MIKA -->
 <section id="tmika">
-<div class="title"><h2>Contoh Tanpa Mika</h2></div>
-<div class="gallery">
-<div class="card"><img src="https://i.postimg.cc/Y9DS1dF5/20260609-192010-2.jpg"></div>
-<div class="card"><img src="https://i.postimg.cc/PfcxJFTW/20260609-192041.jpg"></div>
-<div class="card"><img src="https://i.postimg.cc/1t7zpvF2/20260609-192101-2.jpg"></div>
-<div class="card"><img src="https://i.postimg.cc/xj7C8FnH/20260609-192127.jpg"></div>
-</div>
+  <div class="title"><h2>Contoh Tanpa Mika</h2></div>
+  <div class="gallery" id="galeri-tanpa-mika">
+    <div class="loading-msg">Memuat foto Tanpa Mika...</div>
+  </div>
 </section>
 
 <section id="harga">
-<div class="title"><h2>Daftar Harga</h2></div>
-<div class="price-grid">
-<div class="price-card">
-<h3>Plat Mika Premium</h3>
-<div class="price">Rp100.000</div>
-</div>
-<div class="price-card">
-<h3>Tanpa Mika</h3>
-<div class="price">Rp65.000</div>
-</div>
-</div>
+  <div class="title"><h2>Daftar Harga</h2></div>
+  <div class="price-grid">
+    <div class="price-card">
+      <h3>Plat Mika Premium</h3>
+      <div class="price">Rp100.000</div>
+    </div>
+    <div class="price-card">
+      <h3>Tanpa Mika</h3>
+      <div class="price">Rp60.000</div>
+    </div>
+  </div>
 </section>
 
 <footer>ABIZEEN GRAPHIC DESIGN © 2026</footer>
 <a class="wa" href="https://wa.me/6283143089659">💬</a>
+
+<!-- Script memuat foto otomatis dari GitHub -->
+<script>
+async function loadGalleryFolder(folderName, containerId) {
+  const container = document.getElementById(containerId);
+  const apiUrl = `https://api.github.com/repos/EstebanZxx/Abizeen/contents/${folderName}`;
+
+  try {
+    const res = await fetch(apiUrl);
+    if (!res.ok) throw new Error(`Gagal membaca folder ${folderName}`);
+
+    const files = await res.json();
+    
+    // Filter file khusus gambar
+    const imageFiles = files.filter(file => 
+      file.type === 'file' && /\.(jpe?g|png|webp|gif)$/i.test(file.name)
+    );
+
+    if (imageFiles.length === 0) {
+      container.innerHTML = `<div class="loading-msg">Belum ada gambar di folder ${folderName}.</div>`;
+      return;
+    }
+
+    // Render galeri foto
+    container.innerHTML = imageFiles.map(img => `
+      <div class="card">
+        <img src="https://cdn.jsdelivr.net/gh/EstebanZxx/Abizeen@main/${folderName}/${encodeURIComponent(img.name)}" 
+             alt="${img.name}" 
+             loading="lazy"
+             onerror="this.src='${img.download_url}'">
+      </div>
+    `).join('');
+
+  } catch (error) {
+    console.error(`Error loading ${folderName}:`, error);
+    container.innerHTML = `<div class="loading-msg">Gagal memuat gambar ${folderName} dari GitHub.</div>`;
+  }
+}
+
+// Panggil fungsi untuk kedua folder
+loadGalleryFolder('Mika', 'galeri-mika');
+loadGalleryFolder('TanpaMika', 'galeri-tanpa-mika');
+</script>
+
 </body>
 </html>
